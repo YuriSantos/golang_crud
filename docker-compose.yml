@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  database:
+    image: mysql
+    ports:
+      - "3306:3036"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: golang_crud
+    volumes:
+      - db-volume:/var/lib/mysql
+volumes:
+  db-volume: {}
